@@ -1,1 +1,1 @@
-java $SBT_OPTS -jar `dirname $0`/sbt-launch.jar "$@"
+java $SBT_OPTS -jar /nobackup/rahupasu/sbt/sbt-launch.jar "$@"

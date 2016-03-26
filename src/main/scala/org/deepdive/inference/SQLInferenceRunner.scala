@@ -405,9 +405,9 @@ trait SQLInferenceRunner extends InferenceRunner with Logging {
     var cmd = Seq("")
     dbSettings.incrementalMode match {
       case IncrementalMode.INCREMENTAL | IncrementalMode.MATERIALIZATION =>
-        cmd = Seq("sh", "-c", s"cd ${groundingPath} && tobinary.py . format_converter ${Context.outputDir} inc")
+        cmd = Seq("sh", "-c", s"cd ${groundingPath} && /nobackup/rahupasu/deepdive_installation/util/tobinary.py . format_converter ${Context.outputDir} inc")
       case _ =>
-        cmd = Seq("sh", "-c", s"cd ${groundingPath} && tobinary.py . format_converter ${Context.outputDir} original")
+        cmd = Seq("sh", "-c", s"cd ${groundingPath} && /nobackup/rahupasu/deepdive_installation/util/tobinary.py . format_converter ${Context.outputDir} original")
     }
     log.debug("Executing: " + cmd)
     val exitValue = cmd!(ProcessLogger(

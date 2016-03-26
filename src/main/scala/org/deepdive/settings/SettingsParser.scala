@@ -337,7 +337,7 @@ object SettingsParser extends Logging {
     val config = settings.config withFallback ConfigFactory.parseString(
       """
         |sampler {
-        |  sampler_cmd: "sampler-dw"
+        |  sampler_cmd: "/nobackup/rahupasu/deepdive_installation/util/sampler-dw-linux"
         |  sampler_args: "-l 300 -s 1 -i 500 --alpha 0.1"
         |}
         |
